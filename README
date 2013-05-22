@@ -1,0 +1,43 @@
+    -= README =-
+
+QRL v0.0.1
+Author :    Raphaël
+Website :   http://www.onlinecreation.pro
+
+    -= Credits =-
+
+QRL is based on 
+• Phurl, a free and open source url shortening script 
+    https://code.google.com/p/phurl/
+• PHP QR Code, a GPL QRcode generator script 
+    http://sourceforge.net/projects/phpqrcode
+• the favicon is from the famfamfam silk icons library 
+    http://www.famfamfam.com/lab/icons/silk/
+
+    -= How to install it =-
+    
+Step 1: 
+    Unzip/place any php script in the root document folder of your webserver
+    
+Step 2:
+    Open and fill the config.fillme.php file
+    
+Step 3: 
+    Rename config.fillme.php into config.php
+    
+Step 4:
+    Open, read and eventually correct the db.sql file
+    
+Step 5:
+    Inject into your MySQL database the db.sql file
+
+Step 6: 
+    Chmod the phpqrcode/cache folder in order to let the web server user write anything 
+    inside
+
+Step 7:
+    Make a .htaccess file or a rewrite rule that will redirect any visitor who try to 
+    access to http://yourwebsite/([a-zA-Z0-9]+) to redirect.php?alias=$1
+
+Step 8: 
+    Try your new url shortener website !

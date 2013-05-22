@@ -1,0 +1,41 @@
+body{
+    padding: 10px;
+    width: 90%;
+    display: block;
+}
+
+html{
+    display: inherit;
+}
+
+#error {
+    color: #d00;
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+}
+
+#url_list {
+    border: 0;
+    width: 90%;
+}
+
+#url_list * {
+    background: #eee;
+    color: #000;
+}
+
+#url_list thead *{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+#url_list td{
+    padding: 5px;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid white;
+}
