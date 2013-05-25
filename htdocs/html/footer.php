@@ -1,5 +1,5 @@
         </div>
-            <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style socials"
                 addthis:url="<?php echo SITE_URL; ?>"
                 addthis:title="<?php echo SITE_SOCIAL_NETWORKS_TITLE; ?>"
                 addthis:description="<?php echo SITE_SOCIAL_NETWORKS_DESCRIPTION; ?>">

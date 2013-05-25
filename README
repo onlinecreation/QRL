@@ -40,7 +40,7 @@ Step 6:
     inside
 
 Step 7:
-    Make sure that a rewrite redirect the visitor who try to access 
+    Make sure that a rewrite rule redirects the visitor who try to access 
     to http://yourwebsite/([a-zA-Z0-9]+) to redirect.php?alias=$1
 
 Step 8: 
