@@ -1,8 +1,12 @@
     -= README =-
 
-QRL v0.0.1
+QRL
+
 Author :    Raphaël
 Website :   http://www.onlinecreation.pro
+Demo :      http://bin.wf
+GIT :       https://github.com/onlinecreation/QRL
+
 
     -= Credits =-
 
@@ -17,7 +21,7 @@ QRL is based on
     -= How to install it =-
     
 Step 1: 
-    Unzip/place any php script in the root document folder of your webserver
+    Place the content of the htdocs folder into the root folder of your webserver
     
 Step 2:
     Open and fill the config.fillme.php file
@@ -36,8 +40,8 @@ Step 6:
     inside
 
 Step 7:
-    Make a .htaccess file or a rewrite rule that will redirect any visitor who try to 
-    access to http://yourwebsite/([a-zA-Z0-9]+) to redirect.php?alias=$1
+    Make sure that a rewrite redirect the visitor who try to access 
+    to http://yourwebsite/([a-zA-Z0-9]+) to redirect.php?alias=$1
 
 Step 8: 
     Try your new url shortener website !

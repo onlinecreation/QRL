@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&subset=latin,latin-ext);
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&subset=latin,latin-ext');
 
 *{
     font-family: "Source Sans Pro", "Trebuchet MS", sans-serif;
@@ -7,6 +7,25 @@
     font-size: 18px;
 }
 
+
+h1{
+    font-weight: 300;
+    color: #fff;
+    font-size: 45px;
+    line-height: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/**
+ *  BACKGROUND
+ */
 html{
     display:table;
     height: 100%;
@@ -34,9 +53,13 @@ body{
     margin: auto;
 }
 
+/**
+ *  INPUTS AND FORM
+ */
+
 input{
     border: none;
-    border-radius: none;
+    border-radius: 0;
     margin-left: 10px;
     box-shadow: none;
     color: #101010;
@@ -45,7 +68,6 @@ input{
     padding: 1px 15px 1px 15px; 
     font-weight: 600;
     -webkit-appearance: caret;
-	-moz-appearance: caret; /* mobile firefox too! */
 }
 
 input[type=submit]{
@@ -58,19 +80,9 @@ input[type=url],input[type=text]{
     width: 220px;
 }
 
-h1{
-    font-weight: 300;
-    color: #fff;
-    font-size: 45px;
-    line-height: 60px;
-    margin: 0px;
-    padding: 0px;
-}
-
-a{
-    color: #fff;
-    text-decoration: none;
-}
+/**
+ *  FOOTER
+ */
 
 .footer, .footer *{
     font-size: 13px;
@@ -84,11 +96,18 @@ a{
     text-align: right;
 }
 
+/**
+ *  RESULT PAGE
+ */
+
 #qrcode{
     float: left; 
     margin-right: 10px;
 }
 
+/**
+ *  SOCIAL NETWORK ICONS
+ */
 .socials{
     color: #000 !important;
     position: absolute;
@@ -110,6 +129,10 @@ a{
     color: #000 !important;
     font-size: 13px;
 }
+
+/**
+ *  RESPONSIVE SETTINGS
+ */
 
 @media(max-width: 600px){
     .container{

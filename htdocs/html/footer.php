@@ -1,18 +1,10 @@
         </div>
-        <div class="socials">
-            <script type="text/javascript">
-            var addthis_share = {
-                url: "<?php echo SITE_URL ?>",
-                title: "1-click QR code generator and url shortener",
-                description: "In just one click, get a short url and a QRcode of any URL. Transfert any address to your phone, to your friends, on a forum, as quickly as a click !"
-            }
-            </script>
             <div class="addthis_toolbox addthis_default_style addthis_32x32_style"
-                addthis:url="<?php echo SITE_URL ?>"
-                addthis:title="1-click QR code generator and url shortener"
-                addthis:description="In just one click, get a short url and a QRcode of any URL. Transfert any address to your phone, to your friends, on a forum, as quickly as a click !">
-                <a class="addthis_button_facebook" fb:like:href="<?php echo SITE_URL ?>"></a>
-                <a class="addthis_button_twitter" tw:url="<?php echo SITE_URL ?>"></a>
+                addthis:url="<?php echo SITE_URL; ?>"
+                addthis:title="<?php echo SITE_SOCIAL_NETWORKS_TITLE; ?>"
+                addthis:description="<?php echo SITE_SOCIAL_NETWORKS_DESCRIPTION; ?>">
+                <a class="addthis_button_facebook"></a>
+                <a class="addthis_button_twitter"></a>
                 <a class="addthis_button_google_plusone_share"></a>
                 <a class="addthis_button_linkedin"></a>
                 <a class="addthis_button_digg"></a>
