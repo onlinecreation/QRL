@@ -35,13 +35,9 @@ Step 4:
 Step 5:
     Inject into your MySQL database the db.sql file
 
-Step 6: 
-    Chmod the phpqrcode/cache folder in order to let the web server user write anything 
-    inside
-
-Step 7:
+Step 6:
     Make sure that a rewrite rule redirects the visitor who try to access 
     to http://yourwebsite/([a-zA-Z0-9]+) to redirect.php?alias=$1
 
-Step 8: 
+Step 7: 
     Try your new url shortener website !
