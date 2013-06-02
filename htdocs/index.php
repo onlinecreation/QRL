@@ -8,8 +8,8 @@ $prefix[0] = '';
 ?>
 <?php
 
-require_once "config.php";
-require_once "functions.php";
+require_once 'config.php';
+require_once 'functions.php';
 
 db_connect();
 
@@ -18,22 +18,22 @@ if (isset($_GET['url'])) {
     $url = mysql_real_escape_string(trim($_GET['url']));
 
     // Does the url contains an allowed protocol?
-    if (!preg_match("/^(" . URL_PROTOCOLS . ")\:/i", $url)) {
-        $prefix = explode(":", $url);
-        $url = "http://" . $url;
+    if (!preg_match('/^(' . URL_PROTOCOLS . ')\:/i', $url)) {
+        $prefix = explode(':', $url);
+        $url = 'http://' . $url;
     }
 
     // Is the URL valid?
     if (strlen($url) == 0) {
-        $_ERROR[] = "Please enter a URL to shorten.";
+        $_ERROR[] = 'Please enter a URL to shorten.';
     } else if (!filter_var($url, FILTER_VALIDATE_URL)) {
-        $_ERROR[] = "Please enter a valid URL to shorten.";
+        $_ERROR[] = 'Please enter a valid URL to shorten.';
     } else {
         // Does the visitor try to make an infinite redirection loop?
         $hostname = get_hostname();
 
-        if (preg_match("/($hostname)/i", $url)) {
-            $_ERROR[] = "The URL you have entered is not allowed.";
+        if (preg_match('/('. $hostname.')/i', $url)) {
+            $_ERROR[] = 'The URL you have entered is not allowed.';
         }
     }
  
@@ -41,7 +41,8 @@ if (isset($_GET['url'])) {
         $create = true;
 
         // If the URL exists, I will not make annother one.
-        if ($url_data = url_exists($url)) {
+        $url_data = url_exists($url);
+        if ($url_data) {
             $create = false;
             $id = $url_data[0];
             $code = $url_data[1];
@@ -55,25 +56,25 @@ if (isset($_GET['url'])) {
 
                 // If the database reached its maximum code length
                 if (!increase_last_number()) {
-                    die("System error!");
+                    die('System error!');
                 }
             } while (code_exists($code));
 
             $id = insert_url($url, $code);
         }
 
-        // Site URL + "/" + short code = short url
-        $short_url = SITE_URL . "/" . $code;
+        // Site URL + '/' + short code = short url
+        $short_url = SITE_URL . '/' . $code;
 
-        $_GET['url'] = "";
+        $_GET['url'] = '';
 
-        require_once "html/header.php";
-        require_once "html/index_done.php";
-        require_once "html/footer.php";
+        require 'html/header.php';
+        require 'html/index_done.php';
+        require 'html/footer.php';
         exit();
     }
 }
 
-require_once "html/header.php";
-require_once "html/index_form.php";
-require_once "html/footer.php";
+require "html/header.php";
+require "html/index_form.php";
+require "html/footer.php";

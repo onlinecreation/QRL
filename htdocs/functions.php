@@ -82,7 +82,7 @@ function url_exists($url) {
  * @return string
  */
 function generate_code($number) {
-    $out = "";
+    $out = '';
     $codes = ALLOWED_CHAR_CODE;
 
     while ($number > strlen($codes) - 1) {
@@ -141,13 +141,13 @@ function print_errors() {
     global $_ERROR;
 
     if (count($_ERROR) > 0) {
-        echo "<ul id=\"error\">\n";
+        echo '<ul id="error">';
 
         foreach ($_ERROR as $value) {
-            echo "<li>$value</li>\n";
+            echo '<li>'. $value .'</li>';
         }
 
-        echo "</ul>\n";
+        echo '</ul>';
     }
 }
 
