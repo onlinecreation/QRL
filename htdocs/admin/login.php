@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "../config.php";
-require_once "../functions.php";
+require_once '../config.php';
+require_once '../functions.php';
 
 if (count($_POST) > 0) {
     if ($_POST['username'] == ADMIN_USERNAME && $_POST['password'] == ADMIN_PASSWORD) {
@@ -14,7 +14,7 @@ if (count($_POST) > 0) {
         $_ERROR[] = "Wrong username or password.";
     }
 }
-require_once("header.php");
+require_once 'header.php';
 print_errors();
 ?>
 <h2>Administration Login</h2>
@@ -36,5 +36,5 @@ print_errors();
 </form>
 
 <?php
-require_once "footer.php";
+require_once 'footer.php';
 ?>
